@@ -10,4 +10,8 @@ public class firstClass {
     int b;
     int c;
     double d;
+    float f;
+
+    double r;
+    int t;
 }
