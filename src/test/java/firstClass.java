@@ -5,4 +5,6 @@ public class firstClass {
         System.out.println("Hello!");
 
     }
+
+    int a;
 }
