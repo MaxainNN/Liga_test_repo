@@ -11,4 +11,6 @@ public class firstClass {
     int c;
     double d;
     float f;
+
+    double r;
 }
