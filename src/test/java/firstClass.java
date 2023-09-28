@@ -8,4 +8,5 @@ public class firstClass {
 
     int a;
     double d;
+    float f;
 }
