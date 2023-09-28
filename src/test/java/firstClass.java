@@ -8,4 +8,5 @@ public class firstClass {
 
     int a;
     int b;
+    int c;
 }
