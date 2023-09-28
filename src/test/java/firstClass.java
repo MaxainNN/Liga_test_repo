@@ -13,4 +13,5 @@ public class firstClass {
     float f;
 
     double r;
+    int t;
 }
