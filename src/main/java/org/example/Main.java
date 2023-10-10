@@ -1,6 +1,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,7 +31,19 @@ public class Main {
         WebElement permanentAddressElement = driver.findElement(By.xpath("//*[@id=\"permanentAddress\"]"));
         permanentAddressElement.sendKeys("New York");
         WebElement button = driver.findElement(By.xpath("//*[@id=\"submit\"]"));
+//        button.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();",button);
         button.click();
+        WebElement userNameOutput = driver.findElement(By.xpath("//p[@id='name']"));
+        WebElement userEmailOutput = driver.findElement(By.xpath("//p[@id='email']"));
+        WebElement userCurAddOutput = driver.findElement(By.xpath("//p[@id='currentAddress']"));
+        WebElement userPerAddOutput = driver.findElement(By.xpath("//p[@id='permanentAddress']"));
+        String name = userNameOutput.getText();
+        String email = userEmailOutput.getText();
+        String curAdd = userCurAddOutput.getText();
+        String perADd = userPerAddOutput.getText();
+        System.out.println(name + "\n " + email + "\n " + curAdd + "\n " + perADd);
 
 
     }
